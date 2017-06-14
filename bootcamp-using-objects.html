@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		
+
+				var course = {
+						name: 'JavaScript Applications',
+						awesome: true,
+						teachers: ['Assaf', 'Shane'],
+						students: [
+							{
+								name: 'Steve',
+								computer: {
+									OS: 'Linux',
+									type: 'laptop'
+								}
+							},
+
+							{
+								name: 'Katy',
+								computer: {
+									OS: 'OSX',
+									type: 'macbook'
+								}
+							},
+
+							{
+								name: 'Chuck',
+								computer: {
+									OS: 'OSX',
+									type: 'macbook'
+								}
+							}
+						],
+
+						preReqs : {
+							skills : ['html', 'css', 'git'],
+							equipment: {
+								laptop: true,
+								OSOptions: ['linux', 'osx']
+							}
+						}
+					};
+
+
+
+
+					//chalenge 1
+	console.log(course.name);
+		//chalenge 2
+	console.log(course.teachers[1]);
+		//challenge 3
+	console.log(course.students[0].name);
+
+	//chalenge 4
+	//get the index number for the student whose name is Katy.
+	var nameIndex = null;
+	course.students.forEach(function(data,index){
+
+		if(course.students[index].name == 'Katy'){
+			nameIndex = index;
+		}
+
+	})
+
+
+
+	//print her computer type
+	console.log(course.students[nameIndex].computer.type);
+
+	//challenge 5
+	console.log(course.preReqs);
+
+	//challenge 6
+	console.log(course.preReqs.equipment.OSOptions[1]);
+
+	//challlenge 7
+	console.log(course.preReqs.equipment.OSOptions.join(' or '));
+
+	//challenge 8
+	//creating array
+	var  osxStudents = [];
+	//populating array
+	//cycling throughall the students
+	course.students.forEach(function(data,index){
+		//picking the ones who use osx
+		if(course.students[index].computer.OS == 'OSX'){
+				//adding the selected ones to the array
+			osxStudents.push(course.students[index].name);
+		}
+
+
+	})
+
+	//printing array
+	console.log("the students using osx are: " + osxStudents);	
+
+
+
+	</script>
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>
+
+
+
